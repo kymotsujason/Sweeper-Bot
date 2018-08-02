@@ -572,8 +572,9 @@ namespace Sweeper_Bot
                 if (available.Count == 0)
                 {
                     squareToProcess = (grid.Count / 2) + 1;
-                    p1.X = grid[(grid.Count / 2)].Center.X;
-                    p1.Y = grid[(grid.Count / 2)].Center.Y;
+                    int clickCenter = (((grid.Count / rowCount) / 2) * rowCount) - (rowCount / 2);
+                    p1.X = grid[clickCenter].Center.X;
+                    p1.Y = grid[clickCenter].Center.Y;
                     clicked = true;
                 }
             }
@@ -719,7 +720,7 @@ namespace Sweeper_Bot
                                     }
                                     else
                                     {
-                                        Console.WriteLine("guess method 1 failing");
+                                        //Console.WriteLine("guess method 1 failing");
                                         squareToProcess = (surroundingCoord[j]) + 1;
                                         guessCheck = true;
                                         squaresProcessed = 0;
@@ -750,7 +751,7 @@ namespace Sweeper_Bot
                                 {
                                     if (grid[surroundingCoord[j]].Num == 10)
                                     {
-                                        Console.WriteLine("guess method 2 failing");
+                                        //Console.WriteLine("guess method 2 failing");
                                         squareToProcess = (surroundingCoord[j]) + 1;
                                         guessCheck = true;
                                         guess = false;
