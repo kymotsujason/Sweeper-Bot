@@ -1,3 +1,5 @@
+- Moved to here: https://github.com/kymotsujason/AutoHub -
+
 Sweeper Bot
 
 Built for the Windows 7 Minesweeper (if you don't have it, look it up).
